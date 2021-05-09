@@ -5,6 +5,7 @@
     &.icons,
     &.left,
     &.left:not(.overlay) {
+        backdrop-filter: blur(4px);
         width: 50px !important;
         box-shadow: none;
         border-right: 1px solid rgba(255, 255, 255, 0.04);
@@ -13,7 +14,7 @@
             #switch {
                 padding-top: 0;
                 flex: 0 0 50px;
-                backdrop-filter: blur(4px);
+                backdrop-filter: none;
 
                 & > button,
                 & > .addwebpanel-wrapper > button {
@@ -77,6 +78,16 @@
                 .panel-collapse-guard {
                     max-width: 100% !important;
                     min-width: 100% !important;
+
+                    .panel {
+                        backdrop-filter: blur(4px);
+
+                        .webpanel-header {
+                            .webpanel-title {
+                                font-size: 13px;
+                            }
+                        }
+                    }
                 }
             }
         }
