@@ -1,0 +1,84 @@
+@import '../vars/colors';
+
+#panels-container {
+    &,
+    &.icons,
+    &.left,
+    &.left:not(.overlay) {
+        width: 50px !important;
+        box-shadow: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.04);
+
+        #panels {
+            #switch {
+                padding-top: 0;
+                flex: 0 0 50px;
+                backdrop-filter: none;
+
+                & > button,
+                & > .addwebpanel-wrapper > button {
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        width: 2px;
+                        height: 0;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: 0.2s;
+                        background: $pink;
+                    }
+
+                    &:hover {
+                        background: none !important;
+
+                        &:before {
+                            height: 100%;
+                        }
+                    }
+
+                    &.active {
+                        box-shadow: none;
+                        background-color: transparent;
+
+                        &:before {
+                            height: 100%;
+                            background: $purple;
+                        }
+
+                        &:not(:focus) {
+                            color: $purple;
+                            box-shadow: none;
+                            background-color: transparent;
+
+                            svg {
+                                .small-icon-outline,
+                                .small-icon-fill {
+                                    fill: $purple;
+                                }
+                            }
+                        }
+                    }
+
+                    .button-badge {
+                        top: 12px;
+                        right: 12px;
+                    }
+                }
+            }
+
+            .panel-group {
+                left: 50px !important;
+
+                .panel-collapse-guard {
+                    max-width: 100% !important;
+                    min-width: 100% !important;
+                }
+            }
+        }
+    }
+}

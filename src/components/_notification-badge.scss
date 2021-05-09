@@ -1,0 +1,14 @@
+@import '../vars/colors';
+
+.button-badge {
+    top: 12px;
+    right: 12px;
+    font-weight: 400;
+    width: 12px;
+    height: 12px;
+    max-width: 12px;
+    max-height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+    background: $pink;
+}

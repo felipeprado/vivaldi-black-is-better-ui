@@ -1,0 +1,47 @@
+@import 'fonts/_ubuntu';
+@import 'vars/_colors';
+
+body,
+html,
+body *,
+input,
+button,
+textarea,
+#browser,
+#browser.win {
+    & + div,
+    & + div + div,
+    button,
+    input,
+    select,
+    textarea {
+        font-family: 'Ubuntu', 'Arial', 'Verdana', sans-serif !important;
+    }
+}
+
+body {
+    #browser {
+        @import 'components/notification-badge';
+
+        #header {
+            #titlebar {
+                @import 'components/menu-button';
+                @import 'components/window-buttons';
+            }
+
+            @import 'components/tabs';
+        }
+
+        #main {
+            @import 'components/address-bar';
+
+            .inner {
+                @import 'components/sidebar';
+            }
+
+            @import 'components/speed-dial';
+        }
+    }
+}
+
+@import 'animations/slide';

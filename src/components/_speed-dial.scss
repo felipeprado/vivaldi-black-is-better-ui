@@ -1,0 +1,29 @@
+#webview-container {
+    #webpage-stack {
+        .webpageview {
+            .row-wrapper {
+                .devtools-container {
+                    .internal-page {
+                        .startpage {
+                            .startpage-content {
+                                .sdwrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    .dials-wrapper {
+                                        span {
+                                            .speeddial {
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

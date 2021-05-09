@@ -1,0 +1,196 @@
+@import '../vars/colors';
+
+#tabs-tabbar-container {
+    &.top {
+        height: 50px !important;
+        padding-top: 0 !important;
+    }
+
+    #tabs-container {
+        &,
+        .resize {
+            :not(.none) {
+                &.top {
+                    padding-left: 50px;
+                    padding-right: 150px;
+                }
+            }
+
+            .tab-strip {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                span {
+                    display: block;
+
+                    .tab-position {
+                        height: 50px !important;
+                        position: relative;
+                        top: auto !important;
+                        bottom: auto !important;
+                        left: auto !important;
+                        right: auto !important;
+                        transform: none !important;
+
+                        .tab {
+                            background-color: transparent;
+                            transition: 0.2s;
+                            justify-content: center;
+                            border-top-left-radius: 12px !important;
+                            border-top-right-radius: 12px !important;
+
+                            .tab-header {
+                                padding-left: 12px;
+
+                                .title {
+                                    -webkit-mask-image: -webkit-linear-gradient(180deg, transparent 0, $white 75px);
+                                    mask-image: linear-gradient(180deg, transparent 0, $white 75px);
+                                }
+
+                                .button-badge {
+                                    left: 20px;
+                                }
+                            }
+
+                            &:before {
+                                content: '';
+                                left: 50%;
+                                height: 2px;
+                                background: $purple;
+                                transform: translateX(-50%);
+                                -webkit-mask-image: none;
+                                mask-image: none;
+                                transition: 0.2s;
+                                position: absolute;
+                                bottom: 0;
+                                width: 0;
+                            }
+
+                            &:not(.active) {
+                                .favicon,
+                                .title {
+                                    transition: 0.2s;
+                                    filter: blur(0.75px) grayscale(100%);
+                                    opacity: 0.4;
+                                }
+                            }
+
+                            &:hover {
+                                &:not(.active) {
+                                    background: none !important;
+                                }
+
+                                &:before {
+                                    background: $pink;
+                                    width: 100%;
+                                }
+
+                                .favicon,
+                                .title {
+                                    filter: blur(0px) grayscale(100%);
+                                    opacity: 1;
+                                }
+                            }
+
+                            &.active {
+                                &:not(.marked) {
+                                    &:not(.tab-mini) {
+                                        &:after {
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                                &.active {
+                                    background: none;
+
+                                    .favicon,
+                                    .title {
+                                        filter: blur(0px) grayscale(100%) !important;
+                                        opacity: 1;
+                                    }
+
+                                    &:before {
+                                        width: 100%;
+                                    }
+
+                                    &:hover {
+                                        &:before {
+                                            background: $purple;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .toolbar {
+                    position: static;
+                    width: 50px;
+                    height: 50px;
+
+                    .newtab {
+                        button {
+                            height: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            span {
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .toolbar {
+                & > .button-toolbar,
+                & > .toolbar-wrap > .button-toolbar,
+                & > .toolbar-group > .button-toolbar,
+                & > input {
+                    position: static;
+                    width: 50px;
+                    height: 50px;
+
+                    button {
+                        svg,
+                        img {
+                            height: 20px;
+                            width: 20px;
+                            fill: rgba(255, 255, 255, 0.3);
+                            transition: 0.2s;
+                        }
+
+                        .button-badge {
+                            top: 12px;
+                            left: auto;
+                            right: 12px;
+                        }
+
+                        &:hover {
+                            svg {
+                                fill: rgba(255, 255, 255, 0.7);
+                            }
+                        }
+
+                        &:disabled {
+                            svg,
+                            img {
+                                &,
+                                &:first-child {
+                                    flex: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

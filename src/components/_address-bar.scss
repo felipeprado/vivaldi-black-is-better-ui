@@ -1,0 +1,158 @@
+@import '../vars/colors';
+
+.UrlBar {
+    height: 50px;
+
+    .UrlBar-AddressField,
+    .UrlBar-SearchField {
+        height: 36px;
+        background: rgba(0, 0, 0, 0.2);
+        border-color: transparent !important;
+        border-radius: 12px;
+        padding: 0 12px;
+
+        &:focus-within {
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .UrlBar-AddressField {
+        .UrlBar-UrlFieldWrapper {
+            .UrlField {
+                &.UrlField--IsEmpty,
+                &.UrlField--HasEditText,
+                &:focus,
+                &:focus-within {
+                    .UrlBar-UrlField {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        .pageload {
+            .pageload-indicator {
+                &,
+                &[value] {
+                    height: 32px;
+                    right: auto;
+                    left: 1px;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    opacity: 0.3;
+                    transition: 2s;
+                    width: calc(100% - 2px) !important;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: calc(100% - 4px);
+                    height: 100%;
+                    -webkit-animation: slide 2s infinite;
+                    animation: slide 2s infinite;
+                    opacity: 0.8;
+                    background: linear-gradient(
+                        to right,
+                        rgba(80, 250, 123, 0) 0%,
+                        rgba($green, 0.8) 50%,
+                        rgba(128, 186, 232, 0) 99%,
+                        rgba(125, 185, 232, 0) 100%
+                    );
+                }
+            }
+        }
+
+        .toolbar {
+            .button-toolbar {
+                align-self: center;
+                button {
+                    height: 22px;
+                }
+            }
+        }
+    }
+
+    .toolbar {
+        height: 50px;
+
+        .button-toolbar {
+            button {
+                min-width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg,
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+
+            &.ExtensionIcon--Hidden {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .profile-popup {
+        button {
+            img {
+                border: 2px solid $nightPurple;
+                filter: grayscale(100%);
+                transition: 0.2s;
+                width: 20px;
+                height: 20px;
+                flex: 0 0 20px;
+            }
+
+            &:hover {
+                img {
+                    filter: grayscale(0);
+                }
+            }
+        }
+
+        & + .toolbar-extensions {
+            .button-toolbar {
+                &:not(.button-narrow) {
+                    &:first-of-type {
+                        &:before {
+                            height: 38px;
+                            left: -5px;
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.toolbar-mainbar,
+    & .toolbar-mainbar {
+        &:after {
+            background-color: rgba(255, 255, 255, 0.04);
+        }
+
+        & > .button-toolbar,
+        & > .toolbar-group > .button-toolbar {
+            & > button {
+                min-width: 50px;
+                height: 50px;
+                transition: 0.2s;
+            }
+        }
+    }
+}
