@@ -13,7 +13,7 @@
             #switch {
                 padding-top: 0;
                 flex: 0 0 50px;
-                backdrop-filter: none;
+                backdrop-filter: blur(4px);
 
                 & > button,
                 & > .addwebpanel-wrapper > button {
