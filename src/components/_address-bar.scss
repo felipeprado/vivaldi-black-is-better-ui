@@ -45,6 +45,10 @@
                     width: calc(100% - 2px) !important;
                 }
 
+                &[value='100'] {
+                    opacity: 0;
+                }
+
                 &:before {
                     content: '';
                     position: absolute;
