@@ -9,12 +9,8 @@
     #tabs-container {
         &,
         .resize {
-            :not(.none) {
-                &.top {
-                    padding-left: 50px;
-                    padding-right: 150px;
-                }
-            }
+            padding-right: 150px !important;
+            padding-left: 150px !important;
 
             .tab-strip {
                 display: flex;
@@ -191,6 +187,11 @@
                     }
                 }
             }
+        }
+
+        .resize {
+            padding: 0 !important;
+            flex: 1;
         }
     }
 }
