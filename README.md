@@ -7,7 +7,7 @@
 
 ## Read this before install
 
-<p><strong>Pay attention:</strong> I tested it only in Windows, I haven't tested in Mac OS or Linux devices. If you wanna to test it on Max OS or Linux, do it at your own risk.</p>
+<p><strong>Pay attention:</strong> I tested it only in Windows, I haven't tested in Mac OS or Linux devices. If you wanna to test it on Mac OS or Linux, do it at your own risk.</p>
 <br/>
 
 ## Features
