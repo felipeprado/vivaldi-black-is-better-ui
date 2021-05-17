@@ -1,3 +1,5 @@
+@import '../vars/colors';
+
 #webview-container {
     #webpage-stack {
         .webpageview {
@@ -5,11 +7,30 @@
                 .devtools-container {
                     .internal-page {
                         .startpage {
+                            .startpage-navigation {
+                                .startpage-navigation-group {
+                                    .button-startpage {
+                                        &.active {
+                                            border-color: $pink;
+                                        }
+                                    }
+                                    .editable-title-container {
+                                        .button-startpage {
+                                            border-color: $purple;
+
+                                            &.active {
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                             .startpage-content {
                                 .sdwrapper {
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
+                                    background: rgba(0, 0, 0, 0.75);
+                                    backdrop-filter: contrast(0.5);
 
                                     .dials-wrapper {
                                         span {

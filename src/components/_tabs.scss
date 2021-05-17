@@ -122,6 +122,14 @@
                     }
                 }
 
+                .tab-yield-space {
+                    position: static !important;
+                    border: 1px dotted $purple;
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 0px;
+                    transform: none !important;
+                }
+
                 .toolbar {
                     position: static;
                     width: 50px;
