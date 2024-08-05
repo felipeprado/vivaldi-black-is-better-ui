@@ -1,4 +1,4 @@
-# 🖤 Vivaldi Better is Black UI 🖤
+# 🖤 Vivaldi Black is Better UI 🖤
 
 ![Preview](https://raw.githubusercontent.com/felipeprado/vivaldi-black-is-better-ui/master/images/preview.jpg)
 
